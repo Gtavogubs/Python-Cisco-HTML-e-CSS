@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo de Estrutura Semântica</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header,
+        nav,
+        section,
+        article,
+        aside,
+        footer {
+            padding: 20px;
+            border-bottom: 1px solid #ccc;
+        }
+
+        main {
+            display: flex;
+        }
+
+        article {
+            flex: 3;
+        }
+
+        aside {
+            flex: 1;
+            background-color: #f4f4f4;
+            
+        }
+    </style>
+</head>
+
+<!-- Cabeçalho Principal-->
+
+<body>
+    <header>
+        <h1>Minha Página</h1>
+        <p>Bem-vindo ao site de Exemplo com HTML semântico</p>
+    </header>
+
+    <!--Navegação Principal-->
+    <nav>
+        <ul>
+            <li><a href="#">Início</a></li>
+            <li><a href="#">Sobre</a></li>
+            <li><a href="#">Serviços</a></li>
+            <li><a href="#">Contato</a></li>
+        </ul>
+    </nav>
+
+    <!--Conteúdo Principal-->
+    <main>
+        <!-- Artigos ou posts principais -->
+        <article>
+            <header>
+                <h2>Título do Artigo</h2>
+                <p>Publicado em <time datetime="2025-04-08">8 de abril de 2025</time></p>
+            </header>
+            <section>
+                <h3>Introdução</h3>
+                <p>Esse é um exemplo de seção dentro de um artigo.</p>
+            </section>
+            <section>
+                <h3>Conteúdo</h3>
+                <p>Mais informações relevantes aparecem aqui.</p>
+            </section>
+            <footer>
+                <p>Autor: Fulano de tal</p>
+            </footer>
+        </article>
+        <!-- Barra lateral com informações adicionais-->
+        <aside>
+            <h3>Sobre o autor</h3>
+            <p>Fulano é desenvolvedor front-end com paixão por HTML</p>
+        </aside>
+
+    </main>
+    <!--Rodapé da página-->
+    <footer>
+        <p>&copy; 2025 Minha, Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>

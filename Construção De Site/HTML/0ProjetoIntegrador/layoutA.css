@@ -1,0 +1,155 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(72, 192, 72);
+}
+
+header {
+    color: white;
+    font-family: 'Comic Sans MS', cursive;
+    text-align: start;
+    margin-left: 3%;
+    margin-top: 2%;
+    font-size: 50px;
+
+
+}
+
+main {
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px;
+    background-color: white;
+    margin-left: 3%;
+    margin-right: 20%;
+    margin-top: 2%;
+    
+    
+    
+}
+p{
+    display: flex;
+}
+div{
+    display: flex;
+}
+
+.quadrado {
+    display: grid;
+    grid-template-columns:repeat(9, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    background-image: rgb(176, 176, 248);
+    justify-content: space-between;
+}
+#p1{
+    font-family: 'Times New Roman', Times, serif;
+    margin-top: 2;
+    margin-right: 2%;
+    margin-left: 2%;
+    font-size: 24.5px;  
+    text-indent: 10px;
+    grid-column: 1/10;
+    grid-row: 1/8;
+}
+#pgt{
+    grid-column: 3/9;
+    grid-row: 2;
+    font-family:  'Comic Sans MS', cursive;
+    text-align: center;
+    font-size: 36px;
+    margin-left: 10%;
+    margin-top: 2%;
+    
+
+}
+
+#cx10 {
+    margin-top: 100px;
+    background-color: aquamarine;
+    border-color: blue;
+    border-width: 5px;
+    border-style: dashed;
+    outline-width: 10px;
+    outline-style: double;
+    outline-color: brown;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    grid-column: 2;
+    grid-row: 3;
+}
+
+#pbig {
+    grid-column: 6;
+    grid-row: 3/5;
+    background-color: aquamarine;
+    width: 150px;
+    height: 150px;
+    margin-left:14%;
+    margin-top: 2%;
+    margin-bottom: 5%;
+    
+    text-align: center;
+    font-family: 'Comic Sans MS';   
+    font-size: 25px;
+    background-image: ;
+}
+
+
+
+#psoso {
+    grid-column:4;
+    grid-row: 3;
+    background-color: aquamarine;
+    width: 150px;
+    height: 150px;
+    margin-left:14%;
+    margin-top: 2%;
+    margin-bottom: 5%;   
+    font-family: 'Comic Sans MS';
+    font-size: 25px;
+    background-image: ;
+}
+
+#ptiny {
+    grid-column: 2;
+    grid-row: 3;
+    background-color: #7fffd4;
+    width: 150px;
+    height: 150px;
+    margin-left:14%;
+    margin-top: 2%;
+    margin-bottom: 5%;
+    text-align: center;
+    font-family: 'Comic Sans MS';
+    font-size: 25px;
+    background-image: ;
+}
+
+
+#st {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    margin-left: 3%;
+    margin-top: 2%;
+}
+
+#c {
+    font-family: 'Times New Roman', Times, serif;
+    margin-top: 2;
+    margin-right: 2%;
+    margin-left: 2%;
+    font-size: 25px;
+    text-indent: 10px;
+
+}
+
+select, input[type="text"], button{
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid black;
+    font-size: 14px;
+}

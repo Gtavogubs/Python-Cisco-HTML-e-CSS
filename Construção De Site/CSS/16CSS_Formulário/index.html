@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: aliceblue;
+            color: #333;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #222;
+        }
+
+        form {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 600px;
+            margin: 0 auto;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #2f4f4f;
+            color: #fff;
+            border-radius: 5px;
+            font-size: 18px;
+        }
+
+        select,
+        input[type="text"],
+        button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #1c2c2c;
+            font-size: 14px;
+        }
+
+        label {
+            display: block;
+            margin: 5px 0;
+            cursor: pointer;
+        }
+
+        input[type="checkbox"],
+        input[type="radio"] {
+            margin-right: 8px;
+        }
+
+        button {
+            background: #2f4f4f;
+            color: #fff;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        button:hover {
+            background: #1c2c2c;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Formulários</h1>
+    <!-- Formulário conectado ao Google Sheets -->
+    <form name="Submit-to-google-sheet1">
+        <!-- Pergunta com menu suspenso -->
+        <h2>Qual seu time do coração?</h2>
+        <select name="time" required>
+            <option value="" disabled selected>Selecione seu time</option>
+            <option value="atletico">Atlético</option>
+            <option value="america">América</option>
+            <option value="vilanova">Vila Nova</option>
+            <option value="cruzeiro">Cruzeio</option>
+        </select>
+
+        <!-- Pergunta com checkboxes-->
+        <h2> Qual brinde você gostaria de ganhar?</h2>
+        <label> <input type="checkbox" name="brinde" value="camisa">Camisa do time</label>
+        <label> <input type="checkbox" name="brinde" value="ingresso">Ingresso VIP</label>
+
+        <!-- Perguntaa com rádio buttons -->
+        <h2>Você já foi ao estádio em dia de jogos?</h2>
+        <label><input type="radio" name="pesquisa" value="sim">Já fui ao mineirão</label>
+        <label><input type="radio" name="pesquisa" value="não">Não fui ao mineirão </label>
+
+        <!-- Pergunta com frequência de visitas -->
+        <h2>Aproximadamente quantas vezes?</h2>
+        <label><input type="radio" name="vezes" value="0"> 0 vezes</label>
+        <label><input type="radio" name="vezes" value="1a3"> 1 a 3 vezes</label>
+        <label><input type="radio" name="vezes" value="4a7"> 4 a 7 vezes</label>
+        <label><input type="radio" name="vezes" value="mais7"> acima de 7</label>
+
+        <!-- Sugestão livre -->
+        <h2> Deixe aqui sua sugestão.</h2>
+        <input name="sugestao" type="text" placeholder="mensagem">
+
+        <!-- Botão -->
+        <button type="submit">Cadastre</button>
+
+    </form>
+    <script>
+        // URL do Google Apps Script para salvar os dados Google Shets:
+        const scriptURL = ''
+        const form = document.form['submit-to-googl-sheet'];
+
+        form.addEventListener('submit', e => {
+            e.preventDefault(); // Impede o recarregamento da página
+
+            // Envia os dados para o Google Sheets via POST
+            fetch(scriptURL, { method: 'POST', body: new FormData(formt) }).then(response => console.log('Sucess!', response)).catch(error => console.error('Error!', error.message));
+
+            // Limpa o formulário após envio
+            form.reset();
+
+        });
+    </script>
+
+</body>
+<script>
+    var sheetName = 'Sheet1'
+    var scriptProp = propertieService.getScriptProperties()
+    function intialSetup() {
+        var activeSpreadsheet = activeSpreadSheetApp.getActiveSpreadSheet()
+        scriptProp.setProperty('key', getActiveSpreadSheet.getid())
+    }
+
+    function doPost(e) {
+        var lock = LockService.getScriptLock()
+        lock.tryLock(10000)
+
+        try {
+            var doc = SpreadsheetApp.openById(scriptProp.getProperty('key'))
+            var sheet = doc.getSheetByName(sheetName)
+
+            var headers = sheet.getRange(1, 1, 1, sheet.getLastColumn()).getValues()[0] var nextRow = sheet.getLastRow() + 1
+
+            var newRow = header.map(fuction(header){
+                return header == 'timestamp' ? new Date() : e.parameter[header]
+            })
+
+            sheet.getRange(nextRow, 1, 1, newRow.length).setValues([newRow])
+
+            return ContentsService
+                .createTextOutput(JSON.stringfy({ 'result': 'sucess', 'row': nextRow })).setMimeType(ContentService.MimeType.JSON)
+        }
+
+        finally {
+            lock.releaseLock()
+        }
+    }
+</script>
+
+</html>

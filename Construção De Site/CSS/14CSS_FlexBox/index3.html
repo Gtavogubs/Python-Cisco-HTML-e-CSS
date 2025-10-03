@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>layout</title>
+    <style>
+        header{
+            display: flex;
+            background-color: rgb(255, 99, 151);
+            height: 47px;
+            align-items: center;
+            color: aliceblue;
+        }
+        .caixaheader{ 
+            height: 30px;
+            margin: 5px;
+            width: 8.4%;   
+        }
+        #caixaheader{
+            background-color: rgb(189, 189, 189);            
+        }
+        #caixa1section{
+            background-color: rgb(250, 88, 88);
+            height: 200px;
+            width: 35%;
+            
+        }
+        #caixa2section{
+            background-color: rgb(15, 15, 15);
+            height: 200px;
+            width: 65%;
+            
+        }
+        main {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .caixadivsection{
+            display: flex;
+            height: 50%;
+            background-color: burlywood;
+            
+        }
+        #divsection1{
+            background-color: rgb(10, 10, 10);
+            width: 40%;
+            height: 100%;
+        }
+        #divsection2{
+            background-color: rgb(255, 78, 78);
+            width: 60%;
+            height: 100%;
+           
+        }
+        #caixaarticle1{
+            background-color: rgba(48, 47, 44, 0.527);
+            width: 34.2%;
+            height: 60px;
+            margin-left: 5px;
+        }    
+        #caixaarticle2{
+            background-color: rgba(255, 213, 89, 0.527);
+            width: 34.2%;
+            height: 60px;
+           
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div  id="caixaheader" class="caixaheader">1</div>
+        <div class="caixaheader"></div>
+        <div class="caixaheader"></div>
+        <div class="caixaheader"></div>
+        <div class="caixaheader"></div>
+        <div  id="caixaheader" class="caixaheader">2</div>
+        <div class="caixaheader"></div>
+        <div class="caixaheader"></div>
+        <div  id="caixaheader" class="caixaheader">3</div>
+        <div  id="caixaheader" class="caixaheader">4</div>
+        <div  id="caixaheader" class="caixaheader">5</div>
+    </header>
+    <main>
+        <section id="caixa1section"></section>
+        <section id="caixa2section">
+            <div class="caixadivsection">
+                <div id="divsection1"></div>
+                <div id="divsection2"></div>
+            </div>
+            <div class="caixadivsection"></div>
+        </section>
+        <article id="caixaarticle1">
+            <div></div>
+            <div></div>
+        </article>
+        <article id="caixaarticle2"></article> 
+    </main>
+      
+</body>
+</html>

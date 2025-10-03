@@ -1,0 +1,41 @@
+a{
+    margin-top: 10px;
+    font-size: 30px;
+    padding-left: 40px;
+    padding-left: 40px;
+    background-color: aqua;
+}
+body{
+    background-color: #93D5E6;
+}
+header{
+    margin: auto;
+}
+main{
+    margin: auto;
+}
+p{
+    font-size: 22px;
+}
+h1{
+    font-size: 50px;
+    color: aliceblue;
+    text-align: center;
+    background-color: #4DC2E0;
+}
+#imagem{
+    background-image: url();
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-color: #3b97ad;
+    height: 100hv;
+}
+nav{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+#menu{
+    display: none;
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Query</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="style-print.css" media="print">
+    <!-- Media Types e media features -->
+    <link rel="stylesheet" href="style-horizontal.css" media="screen and (orientation:landscape)">
+    <link rel="stylesheet" href="style-vertical.css" media="screen and (orientation:portrait)">
+    <link rel="stylesheet" href="stylegeral.css" media="all">
+</head>
+
+<body>
+    <header>
+        <h1>Media Query Features.</h1>
+        <div id="menu" class="lista">
+            <input class="a2" id="titulo-1" type="checkbox">
+            <div class="a1">
+                <label for="titulo-1">
+                    <h2 class="titulo">Menu</h2>
+                </label>
+                <div class="a3">
+                    <a href="#" class="conteudo">teste1</a>
+                    <a href="#" class="conteudo">teste2</a>
+                    <a href="#" class="conteudo">teste3</a>
+                    <a href="#" class="conteudo">teste4</a>
+                    <a href="#" class="conteudo">teste5</a>
+                    <a href="#" class="conteudo">teste6</a>
+                </div>
+            </div>
+        </div>
+        <nav>
+            <a href="">teste</a>
+            <a href="">teste</a>
+            <a href="">teste</a>
+            <a href="">teste</a>
+            <a href="">teste</a>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Com o Média Query vamos criar configurações adequadas para cada tela,</h2>
+            <p>Lá em cima no link css (link="stylesheet" href=style.css") vamos inserir o média depois do href (link rel="stylesheet" href="style.css" media="")</p>
+            <h2> Temos alguns tipos de media </h2>
+            <p>media="all" para todos os tipos</p>
+            <p>media="screen" para telas.</p>
+            <p>media="print" para impressão</p>
+            <h2>Em screen temos ainda algumas configurações</h2>
+            <p>media="screen and (orientation:landscape)" para páginas na horizontal ou paisagem </p>
+            <p>media="screen and (orientation:portrait)" para páginas na vertical ou retrato</p>
+        </section>
+        <section>
+            <h2>Podemos também fazer outras configurações mais personalizadas de acordo com esta tabela:</h2>
+            <p>Telas pequenas até 600px</p>
+            <p>Celular de 600px até 768</p>
+            <p>Tablet de 768px até 992px</p>
+            <p>Desktop 992px até 1200px</p>
+            <p>Utilizamos o media de acordo com a página</p>
+            <p>@media screen and (min-width:768px)</p>
+        </section>
+        <article>
+            <h3>Texto</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti architecto repellendus molestiae perspiciatis quis doloribus ea asperiores consectetur magnam quam ullam, quae incidunt natus delectus sit ipsum. Nesciunt repellat placeat id. Sapiente, pariatur dolor. Nam amet temporibus repellendus accusantium repellat iusto, beatae atque earum eum minima est inventore, dolorem distinctio, soluta aperiam ut. Dicta ipsa quis delectus quam, perferendis ab ea accusamus dolore eos quod laborum, molestias fugiat dolor dignissimos sunt cupiditate hic temporibus deleniti necessitatibus incidunt sed culpa! Fugit deserunt, iure quis aut laborum blanditiis eligendi dolor, saepe repellat voluptates et in nam possimus porro! Unde dolores voluptatum minus.</p>
+        </article>
+        <div id="imagem">
+            
+        </div>
+    </main>
+</body>
+
+</html>

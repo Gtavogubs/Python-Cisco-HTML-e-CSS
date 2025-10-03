@@ -1,0 +1,13 @@
+print("Vamos calcular a média entre 10 números.")
+a = int(input("Primeiro número: \n"))
+b = int(input("Segundo número: \n"))
+c = int(input("terceiro número: \n"))
+d = int(input("quarto número: \n"))
+e = int(input("quinto número: \n"))
+f = int(input("sexto número: \n"))
+g = int(input("sétimo número: \n"))
+h = int(input("oitavoo número: \n"))
+i = int(input("nono número: \n"))
+j = int(input("décimo número: \n"))
+media = (a + b + c + d + e + f + g + h + i + j )/2
+print(f"A média entre os 10 números é: {media}")

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu de Jogos</title>
+    <style>
+        body {
+            background-color: #74014d; /* cor de fundo da página*/
+        }
+
+        h1 {
+            text-align: center; /* Centraliza o título */
+            margin: 60px 0 40px 0; /*Espaçamento externo: topo, direita, baixo, esquerda */
+            font-size: 1.5em; /* Tamanho da fonte*/
+            color: #ffffff; /*Cor do texto*/
+            font-family: 'Centaur'; /*Fonte sem serifa*/
+            
+        }
+
+        .lista {
+            background: white; /*Fundo branco para a caixa */
+            border-radius: 4px; /*Arredonda os cantos*/
+            margin-bottom: 20px; /* Espaço inferior entre caixas */
+            padding: 20px; /*Espaçamento interno*/
+            box-shadow: 0 2px 6px rgba(50, 50, 90, .1); /*Sombra ao redor da caixa */
+        }
+
+        .titulo {
+            cursor: pointer; /* Mostra a mãozinha ao passar o mouse*/
+            padding: 10px; /*Espaçamento interno*/
+            font-size: 1.4em; /* Aumenta o tamanho da fonte*/
+            font-family: monospace; 
+            color: #8F6ED5; /*Cor roxa do título*/
+        }
+
+        .titulo::after {
+            content: '\12120';
+            float: right;
+            transition: transform .3s ease;
+        }
+
+        .conteudo {
+            padding: 10px;
+            color: #687C93;
+            font-family: HELVETICA;
+            font-size: .875em;
+            line-height: 1.4em;
+            display: none;
+            background-color: aqua;
+        }
+        /*Input escondido que serve como gatilho para abrir/fechar o conteúdo*/
+        .a2 {
+            display: none;
+        }
+        /*Quando o checkbox (.a2) está marcado, mostra o conteúdo da lista*/
+        .a2:checked+.a1 .conteudo {
+            display: inline-block;/*Exibe o conteúdo*/
+        }
+        /* Quando o checkbox está marcado, gira o ícone (::after)*/
+        .a2:checked+.a1 .titulo:after {
+            transform: rotate(155deg) scale(1.08); /* Rotaciona e aumenta um pouco o símbolo*/
+        }
+    </style>
+</head>
+
+<body>
+    <h1> Menu de Jogos </h1>
+    <div class="lista">
+        <input class="a2" id="titulo-1" type="checkbox">
+        <div class="a1">
+            <label for="titulo-1">
+                <h2 class="titulo">Vamos ativar essa caixa</h2>
+            </label>
+            <a class="conteudo" href="a">teste1</a>
+            <a class="conteudo" href="a">teste2</a>
+            <a class="conteudo" href="a">teste3</a>
+            <a class="conteudo" href="a">teste4</a>
+            <a class="conteudo" href="a">teste5</a>
+            <a class="conteudo" href="a">teste6</a>
+        </div>
+    </div>
+</body>
+
+</html>

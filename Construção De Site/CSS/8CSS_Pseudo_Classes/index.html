@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo Classes</title>
+    <style>
+        div {
+            display: inline-block;
+            background-color: burlywood;
+            border: 2px solid black;
+            text-align: center;
+            vertical-align: middle;
+            width: 300px;
+            height: 300px;
+        }
+
+        div:hover {
+            background-color: crimson;
+        }
+
+        div:active {
+            background-color: chartreuse;
+        }
+
+        #ex2:active {
+            background-color: darkgreen;
+        }
+
+        /* neste exemplo abaixo selecionamos o id da div e com o sinal de (>) depois selecionamos o filo de classe no caso (h3)
+        adicionamos o (display : none) para não aparecer nada na div */
+        #ex3 > h3 {
+            display: none;
+        }
+
+        /* NEste exemplo abaixo selecionamos a div mais o id da div, adicionamos a sub classe de estado hover, que faz com que passe o mouse para acontecer a ação, que no caso e a display block que vai aparecer o texto oculto */
+        #ex3:hover > h3{
+            display: block;
+            color: blue;
+            margin-top: 205px;
+        }
+
+        /* Aqui quando passar o mouse por cima da área irá aparecera imagem */
+        #ex3:hover {
+            background-image: url("guaraná.png");
+            width: 300px;
+            height: 300px;
+        }
+
+        /* Aqui quando mostrar o h3 vai adicionar um pseudo element que está dentro do content antes(before) e depois (after) */
+        h3::before {
+            content: ">>";
+        }
+
+        h3::after {
+            content: "<<";
+        }
+
+        #ex20:checked {
+            background-color: blueviolet;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Pseudo Classes</h1>
+    <p>Pseudo Classe ela deve estar relacionada a uma classe e ela está diretamente relacionada no (estado) de um
+        elemento ex</p>
+    <p>Pseudo element está relacionado ao elemento, eles alteram o conteúdo periférico de um elemento</p>
+    <p>Se ele está marcado</p>
+    <p>Se ele está vazio</p>
+    <p>Se ele está desabilitado, entre outros</p>
+    <p>Para selecionarmos pseudo CLasses utilizamos o (:) mais o estado</p>
+    <p>Para adicionarmos o pseudo element utilizamos o (>)</p>
+    <h4>Vamos criar algumas divs para exemplificar nossas pseudo classes.</h4>
+    <div id="ex1">Exemplo</div>
+    <div id="ex2" for="ex20">Exemplo2</div>
+    <div id="ex3">
+        <p>passe o mouse aqui nessa área</p>
+        <h3>VOCÊ ENCONTROU O GUARANÁ OCULTO!</h3>
+    </div>
+</body>
+
+</html>
