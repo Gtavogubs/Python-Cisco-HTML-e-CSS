@@ -1,0 +1,56 @@
+h1 {
+    font-family: 'More Sugar', sans-serif;
+
+}
+
+
+
+body {
+    background-color: #dacfc8;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+
+    height: 100vh;
+}
+
+a{
+    text-decoration: none;
+}
+
+#t {
+    font-family: 'more sugar';
+    color: whitesmoke;
+    font-size: 35px;
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    border-bottom: 14px solid transparent;
+    
+
+}
+
+#mes {
+
+    background-image: url(logo2.png);
+    background-repeat: no-repeat;
+    grid-column: 1/2;
+    grid-row: 1;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-family: 'More Sugar';
+    color: rgb(236, 51, 97);
+    font-size: 25px;
+    
+}
+
+header {
+    display: flex;
+    background-color: #ff004c;
+    grid-column: 2/9;
+    grid-row: 1;
+    border-radius: 800px;
+    align-items: center;
+    justify-content: space-between;
+    
+}
